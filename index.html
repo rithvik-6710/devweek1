@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <form>
+      <h3>Register</h3>
+
+      <input id="name" type="text" placeholder="Name" />
+
+      <input type="email" placeholder="Email" required />
+
+      <input type="tel" placeholder="Phone" required />
+
+      <button id="button" type="submit">Submit</button>
+    </form>
+
+    <script>
+      document.getElementById("button").addEventListener("click", () => {
+        str = document.getElementById("name").value;
+        if (str.length > 25) alert("Name cannot be more than 25 characters");
+        alert("You have successfully registered");
+      });
+    </script>
+  </body>
+</html>
